@@ -33,7 +33,7 @@ jobs:
             irods_testing_environment_project_os: debian-13
             irods_testing_environment_project_db: postgres-16
 
-    uses: irods/irods_reusable_github_workflows/.github/workflows/build-and-test-plugin-debian.yml@main
+    uses: ${GITHUB_ACTION_REPOSITORY}/.github/workflows/build-and-test-plugin-debian.yml@main
     with:
       docker_image: ${{ matrix.docker_image }}
       irods_package_version: ${{ matrix.irods_package_version }}
@@ -68,7 +68,7 @@ jobs:
             irods_testing_environment_project_os: rockylinux-10
             irods_testing_environment_project_db: postgres-16
 
-    uses: irods/irods_reusable_github_workflows/.github/workflows/build-and-test-plugin-enterprise-linux.yml@main
+    uses: ${GITHUB_ACTION_REPOSITORY}/.github/workflows/build-and-test-plugin-enterprise-linux.yml@main
     with:
       docker_image: ${{ matrix.docker_image }}
       irods_package_version: ${{ matrix.irods_package_version }}
@@ -109,7 +109,7 @@ jobs:
             irods_testing_environment_project_os: ubuntu-24.04
             irods_testing_environment_project_db: postgres-16
 
-    uses: irods/irods_reusable_github_workflows/.github/workflows/build-and-test-plugin-ubuntu.yml@main
+    uses: ${GITHUB_ACTION_REPOSITORY}/.github/workflows/build-and-test-plugin-ubuntu.yml@main
     with:
       docker_image: ${{ matrix.docker_image }}
       irods_package_version: ${{ matrix.irods_package_version }}

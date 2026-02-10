@@ -20,7 +20,7 @@ jobs:
             - name: Checkout Workflow Repository
               uses: actions/checkout@v3
               with:
-                  repository: irods/irods_reusable_github_workflows
+                  repository: ${GITHUB_ACTION_REPOSITORY}
                   path: workflow-repo
             - name: Install Prerequisites
               run: |
@@ -45,7 +45,7 @@ jobs:
             - name: Checkout Workflow Repository
               uses: actions/checkout@v3
               with:
-                  repository: irods/irods_reusable_github_workflows
+                  repository: ${GITHUB_ACTION_REPOSITORY}
                   path: workflow-repo
             - name: Install Prerequisites
               run: |
